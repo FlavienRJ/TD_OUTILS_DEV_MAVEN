@@ -10,6 +10,9 @@ public class App
     {
     	App monApp = new App();
         System.out.println(monApp.max(4,5));
+        assertEquals(5, monApp.max(4, 5));
+        assertEquals(5, monApp.max(5, 4));
+        
     }
     public int max(int a, int b)
     {
@@ -17,6 +20,7 @@ public class App
     }
 }
 /*
+ Travail de preparation
 package frj;
 
 import java.io.IOException;
