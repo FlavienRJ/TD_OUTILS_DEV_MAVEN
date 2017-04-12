@@ -4,7 +4,7 @@
   <groupId>frj</groupId>
   <artifactId>frj</artifactId>
   <packaging>jar</packaging>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0</version>
   <name>frj</name>
   <url>http://maven.apache.org</url>
   <dependencies>
@@ -14,10 +14,23 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+
+    <dependency>
+      <groupId>com.opencsv</groupId>
+      <artifactId>opencsv</artifactId>
+      <version>3.9</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-collections4</artifactId>
+      <version>4.1</version>
+    </dependency>
+    
   </dependencies>
 
   <build>
-    <finalName>marelease</finalName>
+    <finalName>marelease-v2</finalName>
     <plugins>
 
       <!-- download source code in Eclipse, best practice -->
@@ -42,8 +55,7 @@
         </configuration>
       </plugin>
 
-     
-     <!-- Make this jar executable -->
+      <!-- Make this jar executable -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
@@ -82,5 +94,4 @@
 
     </plugins>
   </build>
-
 </project>
