@@ -42,22 +42,42 @@
         </configuration>
       </plugin>
 
-      <!-- Make this jar executable -->
+     
+     <!-- Make this jar executable -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
         <configuration>
-          <!-- DO NOT include log4j.properties file in your Jar -->
-          <excludes>
-          <exclude>**/log4j.properties</exclude>
-          </excludes>
           <archive>
           <manifest>
             <!-- Jar file entry point -->
-            <mainClass>frj.class</mainClass>
+            <mainClass>frj.App</mainClass>
           </manifest>
           </archive>
         </configuration>
+      </plugin>
+
+      <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <version>3.0.0</version>
+        <configuration>
+          <descriptorRefs>
+            <descriptorRef>jar-with-dependencies</descriptorRef>
+          </descriptorRefs>
+          <archive>
+            <manifest> <mainClass>frj.App</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+        <executions>
+          <execution>
+            <id>make-assembly</id> <!--this is used for inheritance merges-->
+            <phase>package</phase> <!--bind to the packaging phase-->
+            <goals>
+              <goal>single</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
 
     </plugins>
