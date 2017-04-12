@@ -17,6 +17,7 @@ public class App
     public int max(int a, int b)
     {
         return a > b ? a : b;
+    	//return a; //Pourquoi on a laissé le stagiaire toucher à ça ?
     }
 }
 /*
