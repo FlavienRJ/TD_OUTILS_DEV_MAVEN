@@ -30,7 +30,7 @@
   </dependencies>
 
   <build>
-    <finalName>marelease-v2</finalName>
+    <finalName>marelease-v3</finalName>
     <plugins>
 
       <!-- download source code in Eclipse, best practice -->
